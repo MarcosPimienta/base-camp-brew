@@ -33,7 +33,7 @@ const Mission = () => {
                 <p>Crafted by veterans, for veterans. No compromise, no retreat.</p>
               </div>
             </div>
-            <button className="btn btn-outline">Read Our Story</button>
+            <button className="btn btn-outline" suppressHydrationWarning>Read Our Story</button>
           </div>
         </div>
       </div>

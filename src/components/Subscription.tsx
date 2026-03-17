@@ -33,7 +33,7 @@ const Subscription = () => {
               <span className={styles.amount}>$45</span>
               <span className={styles.per}>/MONTH</span>
             </div>
-            <button className="btn">Deploy Subscription</button>
+            <button className="btn" suppressHydrationWarning>Deploy Subscription</button>
           </div>
           
           <p className={styles.cancel}>No commitment. Cancel mission anytime.</p>

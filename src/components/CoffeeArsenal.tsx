@@ -66,7 +66,7 @@ const CoffeeArsenal = () => {
                 <div className={styles.history}>
                   <p>{coffee.history}</p>
                 </div>
-                <button className="btn btn-sm">Add to Kit</button>
+                <button className="btn btn-sm" suppressHydrationWarning>Add to Kit</button>
               </div>
             </div>
           ))}
