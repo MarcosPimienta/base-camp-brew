@@ -1,0 +1,127 @@
+.subscription {
+  background-color: var(--coffee-black);
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.militaryPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: 
+    radial-gradient(var(--sand-tactical) 1px, transparent 0);
+  background-size: 30px 30px;
+  mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+.card {
+  background-color: var(--camo-dark);
+  border: 4px solid var(--military-brown);
+  padding: 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--sand-tactical);
+  color: var(--coffee-black);
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-hero);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+.card h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--sand-tactical);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--sand-tactical);
+  font-family: var(--font-hero);
+}
+
+.feature p {
+  font-family: var(--font-condensed);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  text-align: left;
+}
+
+.amount {
+  font-family: var(--font-hero);
+  font-size: 4rem;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.per {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  color: var(--sand-tactical);
+  display: block;
+}
+
+.cancel {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

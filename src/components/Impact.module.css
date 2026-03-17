@@ -1,0 +1,96 @@
+.impact {
+  background-color: var(--camo-dark);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.number {
+  font-family: var(--font-hero);
+  font-size: 5rem;
+  color: var(--sand-tactical);
+  line-height: 1;
+}
+
+.label {
+  font-family: var(--font-condensed);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+.causes {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cause {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .cause {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+.cause h3 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .cause h3 {
+    width: auto;
+  }
+}
+
+.cause p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(184, 154, 106, 0.2);
+}

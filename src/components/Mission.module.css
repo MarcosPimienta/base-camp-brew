@@ -1,0 +1,104 @@
+.mission {
+  background-color: var(--camo-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.imageCol {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  padding-top: 125%; /* 4:5 Aspect Ratio */
+  background-color: var(--coffee-black);
+  border: 4px solid var(--sand-tactical);
+  box-shadow: 20px 20px 0 0 rgba(184, 154, 106, 0.1);
+}
+
+.placeholderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--military-brown), var(--coffee-black));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accent_1 {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid var(--metal-gold);
+  border-right: 2px solid var(--metal-gold);
+}
+
+.accent_2 {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 100px;
+  height: 100px;
+  border-bottom: 2px solid var(--metal-gold);
+  border-left: 2px solid var(--metal-gold);
+}
+
+.contentCol h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.point h4 {
+  color: var(--sand-tactical);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.point h4::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--sand-tactical);
+}
+
+.point p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}

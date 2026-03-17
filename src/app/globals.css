@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+  --military-brown: #3A2F28;
+  --camo-dark: #2B2B2B;
+  --sand-tactical: #B89A6A;
+  --coffee-black: #111111;
+  --metal-gold: #C7A36B;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  
+  --font-hero: 'Bebas Neue', cursive;
+  --font-body: 'Montserrat', sans-serif;
+  --font-condensed: 'Roboto Condensed', sans-serif;
+
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--coffee-black);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scrollbar-width: thin;
+  scrollbar-color: var(--sand-tactical) var(--camo-dark);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--camo-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--sand-tactical);
+  border-radius: 0px;
+}
+
+h1, h2, h3, h4, .font-hero {
+  font-family: var(--font-hero);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.font-condensed {
+  font-family: var(--font-condensed);
+}
+
+button, .btn {
+  font-family: var(--font-hero);
+  background-color: var(--sand-tactical);
+  color: var(--coffee-black);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition-speed) ease;
+  font-size: 1.25rem;
+  display: inline-block;
+  text-align: center;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--metal-gold);
+  box-shadow: 0 0 15px rgba(199, 163, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--sand-tactical);
+  color: var(--sand-tactical);
+}
+
+.btn-outline:hover {
+  background-color: var(--sand-tactical);
+  color: var(--coffee-black);
+}
+
+section {
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utilities */
+.text-gold { color: var(--metal-gold); }
+.text-sand { color: var(--sand-tactical); }
+.bg-military { background-color: var(--military-brown); }
+.bg-camo { background-color: var(--camo-dark); }
+

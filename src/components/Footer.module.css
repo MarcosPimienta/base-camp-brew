@@ -1,0 +1,120 @@
+.footer {
+  background-color: var(--coffee-black);
+  padding: 6rem 2rem 3rem;
+  border-top: 1px solid var(--camo-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.logo {
+  font-family: var(--font-hero);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--sand-tactical);
+}
+
+.tagline {
+  font-family: var(--font-condensed);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--camo-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hero);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  border-color: var(--sand-tactical);
+  color: var(--sand-tactical);
+  background-color: rgba(184, 154, 106, 0.05);
+}
+
+.linksCol h4 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.linksCol ul {
+  list-style: none;
+}
+
+.linksCol li {
+  margin-bottom: 1rem;
+}
+
+.linksCol a {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.linksCol a:hover {
+  color: var(--sand-tactical);
+}
+
+.bottom {
+  padding-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+.legal {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.legal a {
+  transition: color 0.3s ease;
+}
+
+.legal a:hover {
+  color: var(--text-secondary);
+}
