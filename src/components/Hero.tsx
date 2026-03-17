@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -6,6 +6,16 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
+        <div className={styles.heroLogo}>
+          <Image 
+            src="/images/logo/BaseCampBrew_Logo.png" 
+            alt="Base Camp Brew Official Logo" 
+            width={300} 
+            height={100} 
+            className={styles.mainLogo}
+            priority
+          />
+        </div>
         <h1 className={styles.title}>
           Brewed For <br />
           <span className="text-sand">Those Who Served</span>

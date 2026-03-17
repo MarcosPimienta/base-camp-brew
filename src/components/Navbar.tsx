@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
@@ -21,7 +22,14 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <div className={styles.logo}>
-          BASE CAMP BREW
+          <Image 
+            src="/images/logo/BaseCampBrew_Logo.png" 
+            alt="Base Camp Brew Logo" 
+            width={120} 
+            height={40} 
+            className={styles.logoImage}
+            priority
+          />
         </div>
 
         {/* Desktop Menu */}

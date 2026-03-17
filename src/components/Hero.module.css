@@ -36,9 +36,20 @@
   animation: fadeIn 1.5s ease;
 }
 
+.heroLogo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mainLogo {
+  height: auto;
+  max-width: 100%;
+}
+
 .title {
   font-size: 5rem;
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 1.5rem;
   color: var(--text-primary);
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);

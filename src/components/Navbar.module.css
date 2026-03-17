@@ -25,11 +25,18 @@
 }
 
 .logo {
-  font-family: var(--font-hero);
-  font-size: 2rem;
-  letter-spacing: 0.15em;
-  color: var(--text-primary);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.scrolled .logo {
+  transform: scale(0.9);
+}
+
+.logoImage {
+  object-fit: contain;
+  height: auto;
 }
 
 .desktopMenu {
