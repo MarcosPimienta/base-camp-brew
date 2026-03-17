@@ -63,6 +63,15 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div className={`${styles.mobileMenu} ${isOpen ? styles.show : ""}`}>
+        <div className={styles.mobileLogo}>
+          <Image
+            src="/images/logo/BaseCampBrew_Logo_v2.png"
+            alt="Base Camp Brew Logo"
+            width={80}
+            height={30}
+            className={styles.logoImage}
+          />
+        </div>
         <a href="#coffee" onClick={toggleMenu} className={styles.mobileLink}>
           Coffee
         </a>

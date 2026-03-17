@@ -83,7 +83,7 @@
 .hamburger {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
@@ -98,14 +98,14 @@
 }
 
 .bar {
-  width: 30px;
+  width: 24px;
   height: 2px;
   background-color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
 .active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .active .bar:nth-child(2) {
@@ -113,35 +113,48 @@
 }
 
 .active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .mobileMenu {
   position: fixed;
-  top: 0;
-  right: -100%;
+  top: -70vh;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background: var(--coffee-black);
+  height: 70vh;
+  background: rgba(17, 17, 17, 0.98);
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 3rem;
+  gap: 1rem;
   z-index: 1050;
-  transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow: hidden;
+  border-bottom: 1px solid var(--sand-tactical);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .show {
-  right: 0;
+  top: 0;
+  right: auto;
+}
+
+.mobileLogo {
+  margin-bottom: 1.5rem;
 }
 
 .mobileLink {
   font-family: var(--font-hero);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  padding: 0.5rem 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(184, 154, 106, 0.1);
 }
 
 .mobileLink:hover {
