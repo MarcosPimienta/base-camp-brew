@@ -97,6 +97,7 @@ const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
                   selectedWeight === weight ? styles.active : ""
                 }`}
                 onClick={() => setSelectedWeight(weight)}
+                suppressHydrationWarning
               >
                 {weight}
               </button>
@@ -114,6 +115,7 @@ const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
                   selectedGrind === grind ? styles.active : ""
                 }`}
                 onClick={() => setSelectedGrind(grind)}
+                suppressHydrationWarning
               >
                 {grind}
               </button>
@@ -122,7 +124,9 @@ const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
         </div>
 
         <div className={styles.footer}>
-          <div className={styles.price}>{formatPrice(coffee.basePrice)}</div>
+          <div className={styles.price} suppressHydrationWarning>
+            {formatPrice(coffee.basePrice)}
+          </div>
           <button className={`btn ${styles.addToCart}`} suppressHydrationWarning>
             <span className={styles.plus}>+</span> Add to Kit
           </button>
