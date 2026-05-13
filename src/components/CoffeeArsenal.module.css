@@ -78,31 +78,116 @@
 
 .card h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--text-primary);
 }
 
-.origin, .notes {
+.historyText {
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
-.history {
-  margin: 1.5rem 0 2rem;
+.notesContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--sand-tactical);
+}
+
+.notesIcon {
+  flex-shrink: 0;
+}
+
+.notesText {
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.selectorSection {
+  margin-bottom: 1.5rem;
+}
+
+.selectorLabel {
+  display: block;
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.selectorGrid {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.selectorButton {
+  flex: 1;
+  min-width: 80px;
+  background-color: transparent;
+  border: 1px solid rgba(184, 154, 106, 0.3);
+  color: var(--text-primary);
+  padding: 0.5rem;
+  font-family: var(--font-hero);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.selectorButton:hover {
+  border-color: var(--sand-tactical);
+  background-color: rgba(184, 154, 106, 0.05);
+}
+
+.selectorButton.active {
+  background-color: var(--sand-tactical);
+  color: var(--coffee-black);
+  border-color: var(--sand-tactical);
+}
+
+.footer {
+  margin-top: auto;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-.history p {
-  font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
+.price {
+  font-family: var(--font-hero);
+  font-size: 1.75rem;
+  color: var(--metal-gold);
 }
 
-.card button {
-  width: 100%;
-  margin-top: auto;
+.addToCart {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plus {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .grid {
+    gap: 2rem;
+  }
 }
