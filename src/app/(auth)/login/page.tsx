@@ -46,17 +46,17 @@ export default async function LoginPage({ searchParams }: Props) {
 
       <form action={loginAction} style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
         {/* Honeypot */}
-        <input name="website" type="text" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+        <input name="website" type="text" style={{ display: "none" }} tabIndex={-1} autoComplete="off" suppressHydrationWarning />
         <input type="hidden" name="redirectTo" value={redirectTo ?? "/dashboard"} />
 
         <div>
           <label htmlFor="login-email" style={labelStyle}>Email</label>
-          <input id="login-email" name="email" type="email" required autoComplete="email" style={inputStyle} />
+          <input id="login-email" name="email" type="email" required autoComplete="email" style={inputStyle} suppressHydrationWarning />
         </div>
 
         <div>
           <label htmlFor="login-password" style={labelStyle}>Password</label>
-          <input id="login-password" name="password" type="password" required autoComplete="current-password" style={inputStyle} />
+          <input id="login-password" name="password" type="password" required autoComplete="current-password" style={inputStyle} suppressHydrationWarning />
         </div>
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
