@@ -191,3 +191,28 @@
     gap: 2rem;
   }
 }
+
+/* Add-to-cart states */
+.addToCart:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.addToCart.done {
+  background-color: #4a7c59;
+  color: #fff;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(17,17,17,0.3);
+  border-top-color: var(--coffee-black);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

@@ -160,3 +160,78 @@
 .mobileLink:hover {
   color: var(--sand-tactical);
 }
+
+/* Cart button */
+.cartBtn {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.cartBtn:hover {
+  color: var(--sand-tactical);
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--sand-tactical);
+  color: var(--coffee-black);
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Language button */
+.langBtn {
+  background: none;
+  border: 1px solid rgba(184,154,106,0.4);
+  color: var(--sand-tactical);
+  font-family: var(--font-hero);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.langBtn:hover {
+  background: var(--sand-tactical);
+  color: var(--coffee-black);
+  box-shadow: none;
+  transform: none;
+}
+
+/* Small button variant */
+.btnSm {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile actions row */
+.mobileActions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 0;
+}
