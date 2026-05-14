@@ -8,13 +8,13 @@ const coffees = [
   {
     id: "antioquia-recon",
     name: "Antioquia Recon",
-    image: "/images/Antioquia-Recon.png",
+    image: "/images/Antioquia_Recon.png",
     intensity: "Medium",
     origin: "Antioquia, Colombia",
     notes: "Sugar Cane, Chocolate, Walnuts",
     history:
       "Direct action for your morning. Inspired by the tactical movements in the field.",
-    colorTheme: "#4B5320", // Olive
+    colorTheme: "#424942", // Olive
     weights: ["250g", "500g", "2.5kg"],
     grinds: ["Whole Bean", "Ground"],
     basePrice: 35000,
@@ -22,12 +22,12 @@ const coffees = [
   {
     id: "huila-recon",
     name: "Huila Recon",
-    image: "/images/Huila-Recon.png",
+    image: "/images/Huila_Recon.png",
     intensity: "Medium",
     origin: "La Plata - Huila, Colombia",
     notes: "Sugar Cane, Chamomile, Lime",
     history: "Total operational silence. The darkest roast in our arsenal.",
-    colorTheme: "#111111",
+    colorTheme: "#8c7a64",
     weights: ["250g", "500g", "2.5kg"],
     grinds: ["Whole Bean", "Ground"],
     basePrice: 38000,
@@ -35,19 +35,19 @@ const coffees = [
   {
     id: "sierra-recon",
     name: "Sierra Recon",
-    image: "/images/La-Sierra-Recon.png",
+    image: "/images/Sierra_Recon.png",
     intensity: "Medium",
     origin: "Minca - Magdalena, Colombia",
     notes: "Chocolate, Caramel, Honey",
     history: "Unleash the storm. Engineered for maximum alertness and energy.",
-    colorTheme: "#D35400", // Warning Orange
+    colorTheme: "#4B5320", // Olive
     weights: ["250g", "500g", "2.5kg"],
     grinds: ["Whole Bean", "Ground"],
     basePrice: 36000,
   },
 ];
 
-const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
+const CoffeeCard = ({ coffee }: { coffee: (typeof coffees)[0] }) => {
   const [selectedWeight, setSelectedWeight] = useState(coffee.weights[0]);
   const [selectedGrind, setSelectedGrind] = useState(coffee.grinds[0]);
 
@@ -79,10 +79,20 @@ const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
         </div>
         <h3>{coffee.name}</h3>
         <p className={styles.historyText}>{coffee.history}</p>
-        
+
         <div className={styles.notesContainer}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.notesIcon}>
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={styles.notesIcon}
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
           </svg>
           <span className={styles.notesText}>{coffee.notes.toUpperCase()}</span>
         </div>
@@ -127,7 +137,10 @@ const CoffeeCard = ({ coffee }: { coffee: typeof coffees[0] }) => {
           <div className={styles.price} suppressHydrationWarning>
             {formatPrice(coffee.basePrice)}
           </div>
-          <button className={`btn ${styles.addToCart}`} suppressHydrationWarning>
+          <button
+            className={`btn ${styles.addToCart}`}
+            suppressHydrationWarning
+          >
             <span className={styles.plus}>+</span> Add to Kit
           </button>
         </div>
