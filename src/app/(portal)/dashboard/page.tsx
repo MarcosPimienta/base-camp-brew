@@ -265,6 +265,13 @@ export default async function DashboardPage({ searchParams }: Props) {
             }}>
               Shop Coffee
             </Link>
+            <Link href="/" style={{
+              display: "block", border: "1px solid rgba(184,154,106,0.3)", color: "var(--sand-tactical)",
+              fontFamily: "var(--font-hero)", letterSpacing: "0.05em", textTransform: "uppercase",
+              padding: "0.75rem 1rem", textAlign: "center", fontSize: "0.9rem", textDecoration: "none",
+            }}>
+              Return to Homepage
+            </Link>
           </div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function AdminNav() {
       {/* Logout */}
       <div style={{ padding: "1rem 1.25rem", borderTop: "1px solid rgba(184,154,106,0.1)" }}>
         <form action={logoutAction}>
-          <button type="submit" style={{
+          <button type="submit" suppressHydrationWarning style={{
             width: "100%", background: "none", border: "1px solid rgba(184,154,106,0.2)",
             color: "var(--text-secondary)", fontFamily: "var(--font-condensed)", fontSize: "0.8rem",
             letterSpacing: "0.05em", textTransform: "uppercase", padding: "0.6rem", cursor: "pointer",

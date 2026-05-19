@@ -38,7 +38,7 @@ const Navbar = () => {
     <>
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <div className={styles.container}>
-          <div className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             <Image
               src="/images/logo/BaseCampBrew_Logo_v2.png"
               alt="Base Camp Brew Logo"
@@ -47,14 +47,14 @@ const Navbar = () => {
               className={styles.logoImage}
               priority
             />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <a href="#coffee" className={styles.navLink}>Coffee</a>
-            <a href="#gear" className={styles.navLink}>Gear</a>
-            <a href="#mission" className={styles.navLink}>Mission</a>
-            <a href="#subscription" className={styles.navLink}>Subscription</a>
+            <Link href="/#coffee" className={styles.navLink}>Coffee</Link>
+            <Link href="/#gear" className={styles.navLink}>Gear</Link>
+            <Link href="/#mission" className={styles.navLink}>Mission</Link>
+            <Link href="/#subscription" className={styles.navLink}>Subscription</Link>
 
             {/* Language Switcher */}
             <button
@@ -94,7 +94,7 @@ const Navbar = () => {
               <Link href="/login" className={`btn ${styles.btnSm}`}>
                 My Account
               </Link>
-            )}
+            ) }
           </div>
 
           {/* Tactical Hamburger */}
@@ -111,7 +111,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Overlay */}
         <div className={`${styles.mobileMenu} ${isOpen ? styles.show : ""}`}>
-          <div className={styles.mobileLogo}>
+          <Link href="/" className={styles.mobileLogo} onClick={toggleMenu}>
             <Image
               src="/images/logo/BaseCampBrew_Logo_v2.png"
               alt="Base Camp Brew Logo"
@@ -119,11 +119,11 @@ const Navbar = () => {
               height={30}
               className={styles.logoImage}
             />
-          </div>
-          <a href="#coffee" onClick={toggleMenu} className={styles.mobileLink}>Coffee</a>
-          <a href="#gear" onClick={toggleMenu} className={styles.mobileLink}>Gear</a>
-          <a href="#mission" onClick={toggleMenu} className={styles.mobileLink}>Mission</a>
-          <a href="#subscription" onClick={toggleMenu} className={styles.mobileLink}>Subscription</a>
+          </Link>
+          <Link href="/#coffee" onClick={toggleMenu} className={styles.mobileLink}>Coffee</Link>
+          <Link href="/#gear" onClick={toggleMenu} className={styles.mobileLink}>Gear</Link>
+          <Link href="/#mission" onClick={toggleMenu} className={styles.mobileLink}>Mission</Link>
+          <Link href="/#subscription" onClick={toggleMenu} className={styles.mobileLink}>Subscription</Link>
           <div className={styles.mobileActions}>
             <button className={styles.langBtn} onClick={toggleLocale} suppressHydrationWarning>
               {locale === "es" ? "EN" : "ES"}
